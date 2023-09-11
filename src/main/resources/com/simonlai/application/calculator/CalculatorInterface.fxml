@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="460.0" stylesheets="@InterfaceStyle.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane prefHeight="32.0" prefWidth="460.0">
+      <Pane fx:id="titlePane" prefHeight="32.0" prefWidth="460.0">
          <children>
             <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="415.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
