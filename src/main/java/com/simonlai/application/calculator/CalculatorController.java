@@ -2,13 +2,23 @@ package com.simonlai.application.calculator;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 public class CalculatorController {
-    @FXML
-    private Label welcomeText;
+    @FXML private Pane titlePane;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private double x, y;
+
+    public void init(Stage stage){
+        titlePane.setOnMousePressed(mouseEvent -> {
+            x = mouseEvent.getSceneX();
+            y = mouseEvent.getSceneY();
+        });
+
+        titlePane.setOnMouseDragged(mouseEvent -> {
+            stage.setX(mouseEvent.getScreenX() - x);
+            stage.setY(mouseEvent.getScreenY() - y);
+        });
     }
 }

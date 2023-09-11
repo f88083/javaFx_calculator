@@ -20,7 +20,13 @@ public class CalculatorApp extends Application {
         // stage.getIcons().add()  // Add Icons
         stage.setResizable(false);
         stage.setScene(scene);
+        CalculatorController controller = (CalculatorController)fxmlLoader.getController();
+//        controller.init(stage);
+
+//        ((CalculatorController)fxmlLoader.getController()).init(stage); // Initialization
         stage.show();
+//        CalculatorController controller = fxmlLoader.getController();
+//        controller.init(stage);
     }
 
     public static void main(String[] args) {
