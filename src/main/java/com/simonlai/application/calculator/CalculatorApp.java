@@ -10,6 +10,7 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 
 public class CalculatorApp extends Application {
+    public static Stage primeStage;
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(CalculatorApp.class.getResource("CalculatorInterface.fxml"));
@@ -20,14 +21,11 @@ public class CalculatorApp extends Application {
         // stage.getIcons().add()  // Add Icons
         stage.setResizable(false);
         stage.setScene(scene);
-        CalculatorController controller = (CalculatorController)fxmlLoader.getController();
-//        controller.init(stage);
-
-//        ((CalculatorController)fxmlLoader.getController()).init(stage); // Initialization
+//        primeStage = stage;
         stage.show();
-//        CalculatorController controller = fxmlLoader.getController();
-//        controller.init(stage);
     }
+
+
 
     public static void main(String[] args) {
         launch();
